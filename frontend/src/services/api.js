@@ -1,8 +1,9 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:5001/api', // Backend base URL
-  withCredentials: true, // Send cookies if any
+  baseURL: import.meta.env.VITE_API_URL || 'https://mern-stack-project-01-auth-system-w.vercel.app/api', // Use env variable or fallback
+  // baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5001/api', // Use env variable or fallback
+  withCredentials: true,
 });
 
 // Request interceptor to add the Access Token to headers

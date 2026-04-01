@@ -9,7 +9,7 @@ const app = express();
 const PORT = process.env.PORT || 5001;
 
 app.use(cors({ 
-  origin: process.env.FRONTEND_URL || true, // 'true' reflects the request origin, allowing all for now while keeping credentials supported
+  origin: process.env.FRONTEND_URL || "https://mern-stack-project-01-auth-system-w.vercel.app", // 'true' reflects the request origin, allowing all for now while keeping credentials supported
   credentials: true 
 }));
 app.use(express.json());
