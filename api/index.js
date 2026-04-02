@@ -8,10 +8,18 @@ import authRoutes from "./routes/authRoutes.js";
 const app = express();
 const PORT = process.env.PORT || 5001;
 
+// app.use(cors({ 
+//   origin: process.env.FRONTEND_URL || true, // 'true' reflects the request origin, allowing all for now while keeping credentials supported
+//   credentials: true 
+// }));
+
 app.use(cors({ 
-  origin: process.env.FRONTEND_URL || "https://mern-stack-project-01-auth-system-w.vercel.app", // 'true' reflects the request origin, allowing all for now while keeping credentials supported
-  credentials: true 
+  origin: process.env.FRONTEND_URL || true, 
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"]
 }));
+
 app.use(express.json());
 app.use(cookieParser());
 
