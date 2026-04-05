@@ -18,8 +18,13 @@
       "dest": "/api/index.js"
     },
     {
+      "src": "/assets/(.*)",
+      "dest": "/src/dist/assets/$1"
+    },
+    {
       "src": "/(.*)",
-      "dest": "/src/dist/index.html"
+      "dest": "/src/dist/index.html",
+      "continue": true
     }
   ]
 }
