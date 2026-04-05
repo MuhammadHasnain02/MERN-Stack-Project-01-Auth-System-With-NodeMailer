@@ -25,7 +25,7 @@ export const register = async (req, res) => {
     await user.save();
 
     // Send Welcome Email
-    sendEmail({
+    await sendEmail({
       to: user.email,
       subject: "Welcome to the Community!",
       html: `<p>Thanks for becoming a member! Your account has been created successfully. We are excited to have you on board.</p>`,
