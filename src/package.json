@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "engines": {
     "node": "22.19.0",
-    "pnpm": "10.29.1"
+    "npm": "11.6.0"
   },
   "private": true,
   "type": "module",
